@@ -1,6 +1,7 @@
 import Card from "@/components/Card";
 import { examples } from "@/data/crud";
 import styles from "./page.module.css";
+import { crud } from "@/data/crud";
 
 export default function Page() {
   //await new Promisse((resolve) => setTimeout(resolve, 2000))
@@ -9,7 +10,21 @@ export default function Page() {
     <>
       <main className={styles.main}>
         {examples.map(
-          ({ id, method, route, verb, description, color, Icon }) => (
+          ({ id, method, verb, route, description, color, Icon }) => (
+            <Card
+              key={id}
+              id={id}
+              verb={verb}
+              method={method}
+              route={route}
+              description={description}
+              color={color}
+              Icon={Icon}
+            />
+          ),
+        )}
+        {crud.map(
+          ({ id, method, verb, route, description, color, Icon }) => (
             <Card
               key={id}
               id={id}
