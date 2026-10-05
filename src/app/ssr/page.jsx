@@ -5,7 +5,7 @@ export default async function GetPage() {
   let series = [];
 
   try {
-    const resp = await axios.get(`${process.env.NEXT_URL_SERIES}?limit=50`, {
+    const resp = await axios.get(`${process.env.API_URL_SERIES}?limit=50`, {
       headers: { "x-api-key": process.env.API_KEY },
     });
 

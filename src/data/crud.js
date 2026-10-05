@@ -1,4 +1,13 @@
-import { HardDrive, KeyRound, Server, List } from "lucide-react";
+import {
+    HardDrive,
+    KeyRound,
+    Layers3,
+    List,
+    PlusCircle,
+    Server,
+    SquarePen,
+    Trash2,
+} from 'lucide-react';
 
 export const examples = [
   {
@@ -29,15 +38,33 @@ export const examples = [
     color: "purple",
     Icon: HardDrive,
   },
+  {
+    id: 4,
+    method: "Fullstack",
+    route: "fullstack",
+    verb: "Get",
+    description: "Lista séries via API Route - Backend Intermediário",
+    color: "purple",
+    Icon: Layers3,
+  },
 ];
 
 export const crud = [
+  {
+    id: 1,
+    method: "Create",
+    verb: "Post",
+    route: "create",
+    description: "Cria uma nova série via modal e API Route.",
+    color: "orange",
+    Icon: PlusCircle,
+  },
   {
     id: 2,
     method: "Read",
     verb: "Get",
     route: "read",
-    description: "Lista todas as séries.",
+    description: "Lista séries no SSR e busca pelo id em rota dinâmica.",
     color: "green",
     Icon: List,
   },
